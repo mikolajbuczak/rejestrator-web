@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: #403A3A;
+}
+
+h1 {
+    text-align: center;
+    color: #F2ECEB;
+    font-weight: bold;
+}
+
+form {
+    position: relative;
+    width: 40vw;
+    height: 20vh;
+    align-items: center;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 1vh 1vw;
+    margin: 15px auto;
+    border: 0;
+}
+
+input[type=text], input[type=password] {
+    width: 12vw;
+    min-width: 240px;
+}
+
+input[type=submit] {
+    width: 5vw;
+    min-width: 100px;
+    text-align: center;
+
+}
+
+.inputs {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
