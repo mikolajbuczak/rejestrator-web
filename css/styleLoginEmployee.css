@@ -1,0 +1,65 @@
+/* autor Mikołaj Buczak & Kamil Kaloch */
+html {
+	background-color: #403A3A;
+	width: 70%;
+	margin: auto;
+}
+
+.inputForm {
+	width:30%;
+	margin:auto;
+	color:#F2ECEB;
+	padding-top: 1vh;
+	font-size: 2vw;
+	
+}
+
+.input {
+	padding-top: 1vh;
+	font-size: 2vw;
+}
+
+#id {
+	size: 4;
+}
+
+.error {
+    display: none;
+	font-size: 2vw;
+}
+
+.b_Panel {
+	width: 70%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.PlaceHolder {
+	visibility: hidden;
+	margin: 2% 6%;
+	background-color: #555555;
+	border: 1px #A68F63  solid;
+	border-radius:3vmax;
+	width: 21%;
+	display: flex;
+}
+
+.button {
+	margin: 2% 6%;
+	background-color: #555555;
+	border: 0.5vw #A68F63  solid;
+	border-radius:3vmax;
+	width: 19%;
+	display: flex;
+}
+
+.content {
+	text-align: center;
+	font-size: 4vw;
+	width: auto;
+	margin: auto;
+	color:#F2ECEB;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}

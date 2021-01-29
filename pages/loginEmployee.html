@@ -9,12 +9,38 @@
         <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, user-scalable=no">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/styleLoginEmployee.css">
+		<script src="../scripts/loginEmployee.js"></script>
 
-        <script src="script.js"></script>
     </head>
 
     <body>
-
+		<form class = "inputForm" onsubmit="return false">
+		<div class="input">
+			<label for="id">ID:</label>
+			<input type="text" id="id" tabindex="0"  required maxlength="4"/>
+		</div>
+		<div class="input">
+			<label for="pin">Pin:</label>
+			<input type="password" id="pin" tabindex="1"  required maxlength="4" pattern="[0-9]*" inputmode="numeric" />
+		</div>
+		<h2 class="error">Nie można zalogować</h2>
+		</form>
+		<div class="b_Panel">
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">7</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">8</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">9</div></div>
+			
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">4</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">5</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">6</div></div>
+			
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">1</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">2</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">3</div></div>
+			
+			<div class="PlaceHolder"><div class="content">0</div></div>
+			<div class="button _Number" onclick="addDigit(this)"><div class="content">0</div></div>
+		</div>
     </body>
 </html>
