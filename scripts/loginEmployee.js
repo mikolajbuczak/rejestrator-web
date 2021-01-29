@@ -42,6 +42,13 @@ function loginEmployee() {
         return;
     }
 
+    let employee = JSON.parse(request.responseText);
+
+    sessionStorage.setItem('currentEmployeeID', employee.id);
+    sessionStorage.setItem('currentEmployeePin', employee.pin);
+    sessionStorage.setItem('currentEmployeeName', employee.name);
+    sessionStorage.setItem('currentEmployeeSurname', employee.surname);
+    sessionStorage.setItem('currentEmployeeShift', employee.shift);
+    
     window.location.replace("employeeDashboard.html");
-    console.log(request.responseText);
 }
