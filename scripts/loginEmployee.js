@@ -4,13 +4,13 @@ function addDigit(sender) {
     let id = document.querySelectorAll('#id')[0];
     
     if (id.value.length != 4) {
-        id.value = `${id.value}${sender.innerHTML}`;
+        id.value = `${id.value}${sender.childNodes[0].innerHTML}`;
         return;
     }
     
     let pin = document.querySelectorAll('#pin')[0];
     if (pin.value.length != 4) {
-        pin.value = `${pin.value}${sender.innerHTML}`;
+        pin.value = `${pin.value}${sender.childNodes[0].innerHTML}`;
 
         if (pin.value.length == 4) {
             loginEmployee();
@@ -18,7 +18,6 @@ function addDigit(sender) {
 
         return;
     }
-
 }
 
 function loginEmployee() {
