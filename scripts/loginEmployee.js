@@ -21,10 +21,10 @@ function addDigit(sender) {
 }
 
 function loginEmployee() {
-    let id = document.querySelectorAll('#id')[0].value;
-    let pin = document.querySelectorAll('#pin')[0].value;
+    let id = document.querySelectorAll('#id')[0];
+    let pin = document.querySelectorAll('#pin')[0];
 
-    let credentials = `${id}:${pin}`;
+    let credentials = `${id.value}:${pin.value}`;
     credentials = btoa(credentials);
     let hash = `Basic ${credentials}`;
 
@@ -36,6 +36,9 @@ function loginEmployee() {
     if (request.status != 200) {
         let error = document.querySelectorAll(".error")[0];
         error.classList.remove('error');
+
+        id.value = "";
+        pin.value = "";
         return;
     }
 
