@@ -1,16 +1,16 @@
 // Autor: Mikołaj Buczak & Kamil Kaloch
 
 function addDigit(sender) {
-    let id = document.querySelectorAll('#id')[0].value;
+    let id = document.querySelectorAll('#id')[0];
     
     if (length(id) != 4) {
-        id = `${id}${sender.innerHTML}`;
+        id.value = `${id.value}${sender.innerHTML}`;
         return;
     }
     
-    let pin = document.querySelectorAll('#pin')[0].value;
+    let pin = document.querySelectorAll('#pin')[0];
     if (length(id) != 4) {
-        pin = `${pin}${sender.innerHTML}`;
+        pin.value = `${pin.value}${sender.innerHTML}`;
 
         if (length(pin == 4)) {
             loginEmployee();
