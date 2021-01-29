@@ -11,18 +11,19 @@
 
         <link rel="stylesheet" href="../css/styleLoginAdmin.css">
 
-        <script src="script.js"></script>
+        <script src="../scripts/loginAdmin.js"></script>
     </head>
 
     <body>
         <h1>Logowanie administratora</h1>
-        <form>
+        <form onsubmit="return false">
             <div class="inputs">
-                <input type="text" placeholder="Login" required/>
-                <input type="password" placeholder="Hasło" required/>
-                <input type="submit"/>
+                <input type="text" placeholder="Login" id="username" required/>
+                <input type="password" placeholder="Hasło" id="password" required/>
+                <input type="submit" onclick="loginAdmin()">
             </div>
         </form>
+        <h2 class="error">Nie można zalogować</h2>
         <button>Logowanie pracownika</button>
     </body>
 </html>
