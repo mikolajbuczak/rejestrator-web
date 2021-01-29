@@ -12,7 +12,7 @@ function addDigit(sender) {
     if (length(pin.value) != 4) {
         pin.value = `${pin.value}${sender.innerHTML}`;
 
-        if (length(pin.value == 4)) {
+        if (length(pin.value) == 4) {
             loginEmployee();
         }
 
