@@ -3,16 +3,16 @@
 function addDigit(sender) {
     let id = document.querySelectorAll('#id')[0];
     
-    if (length(id.value) != 4) {
+    if (id.value.length != 4) {
         id.value = `${id.value}${sender.innerHTML}`;
         return;
     }
     
     let pin = document.querySelectorAll('#pin')[0];
-    if (length(pin.value) != 4) {
+    if (pin.value.length != 4) {
         pin.value = `${pin.value}${sender.innerHTML}`;
 
-        if (length(pin.value) == 4) {
+        if (pin.value.length == 4) {
             loginEmployee();
         }
 
