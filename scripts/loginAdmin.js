@@ -22,6 +22,12 @@ function loginAdmin() {
         return;
     }
 
+    let admin = JSON.parse(request.responseText);
+
+    sessionStorage.setItem('currentAdminID', admin.id);
+    sessionStorage.setItem('currentAdminPin', admin.password);
+    sessionStorage.setItem('currentAdminName', admin.name);
+    sessionStorage.setItem('currentAdminSurname', admin.surname);
+
     window.location.replace("adminDashboard.html");
-    console.log(request.responseText);
 }
