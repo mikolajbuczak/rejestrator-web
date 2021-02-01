@@ -7,4 +7,6 @@ function create() {
     let surname = sessionStorage.getItem('currentEmployeeSurname');
 
     nameField.innerHTML = `${name} ${surname}`;
+
+
 }

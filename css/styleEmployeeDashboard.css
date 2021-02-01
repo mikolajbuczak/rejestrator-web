@@ -1,0 +1,66 @@
+/* autor Mikołaj Buczak & Kamil Kaloch */
+
+#div1 {
+    position: relative;
+    height: 40px;
+    width: 600px;
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+#table1 {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    width: 600px;
+    color: white;
+}
+
+#div2 {
+    height: 700px;
+    width: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    border: 1px solid black;
+}
+
+#table2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    width: 600px;
+    color: black;
+}
+
+td {
+    padding-top: 10px;
+}
+
+td:nth-child(1) {
+    width: 500px;
+    text-align-last: left;
+    padding-left: 15px;
+}
+
+td:nth-child(2) {
+    width: 100px;
+}
+
+.oneTable {
+    float: left;
+    width: 33.33%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.columns::after {
+    content: "";
+    display: table;
+    clear: both;
+}
