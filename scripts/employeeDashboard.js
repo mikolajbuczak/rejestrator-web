@@ -12,7 +12,9 @@ let tasksInProgress;
 let tasksDone;
 
 function create() {
-    getEmployeeData();
+    if (!getEmployeeData()) {
+        window.location.replace("error.html");
+    }
     displayName();
     displayTasks();
 }
@@ -29,6 +31,11 @@ function getEmployeeData() {
         surname = "Czerwińska";
         shift = "Dzienny";
     }
+
+    if(employeeID == null || name == null || surname == null || shift == null) {
+        return false;
+    }
+    return true;
 }
 
 function displayName() {
