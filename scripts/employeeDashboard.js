@@ -204,7 +204,7 @@ function addTaskDone(task){
     let request = new XMLHttpRequest();
     request.open("POST", `..\\..\\rejestrator\\api\\tasksDone`, false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    let params = `employeeID=${task.employeeID}&task=${task.task}&startdate=${task.date}&enddate=${getDate()}&time=${calculateTime()}`;
+    let params = `employeeID=${task.employeeID}&task=${task.task}&startdate=${task.date}&enddate=${getDate()}&time=${calculateTime(task.date)}`;
     request.send(params);
 
     if (request.status != 200) {
@@ -233,8 +233,30 @@ function getDate() {
     return `${day}.${month}.${year} ${hour}:${minute}`;
 }
 
-function calculateTime() {
-    return '0';
+function calculateTime(taskStart) {
+    let start = taskStart.split(' ');
+    let date = start[0].split('.');
+    let time = start[1];
+
+    let day = date[0];
+    let month = date[1];
+    let year = date[2];
+
+    let format = `${year}-${month}-${day}T${time}:00`;
+    let startDate = new Date(format);
+
+    let diff = Date.now() - startDate;
+
+    var msec = diff;
+    var hh = Math.floor(msec / 1000 / 60 / 60);
+    msec -= hh * 1000 * 60 * 60;
+    var mm = Math.floor(msec / 1000 / 60);
+    msec -= mm * 1000 * 60;
+    var ss = Math.floor(msec / 1000);
+    msec -= ss * 1000;
+
+    let finalDiff = hh == 0 ? `${mm}min.` : `${hh}h ${mm}min.`;
+    return finalDiff;
 }
 
 function logout() {
