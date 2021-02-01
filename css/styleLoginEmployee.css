@@ -80,6 +80,12 @@ h2 {
 	width: 18%;
 	display: flex;
 	font-weight:bold;
+	cursor: default;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 ._AdminLogin {

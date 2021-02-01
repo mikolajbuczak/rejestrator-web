@@ -46,6 +46,16 @@ input {
 	width: 30vw;
 	display: flex;
 	font-weight:bold;
+	cursor: default;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.button:hover {
+	background-color: #676767;
 }
 
 .content {
