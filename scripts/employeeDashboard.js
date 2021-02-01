@@ -132,3 +132,13 @@ function getTasksDone() {
 
     tasksDone = JSON.parse(request.responseText);
 }
+
+function logout() {
+    sessionStorage.removeItem('currentEmployeeID');
+    sessionStorage.removeItem('currentEmployeePin');
+    sessionStorage.removeItem('currentEmployeeName');
+    sessionStorage.removeItem('currentEmployeeSurname');
+    sessionStorage.removeItem('currentEmployeeShift');
+    
+    window.location.replace("loginEmployee.html");
+}
