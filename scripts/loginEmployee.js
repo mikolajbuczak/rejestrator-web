@@ -20,6 +20,20 @@ function addDigit(sender) {
     }
 }
 
+function eraseDigit() {
+	let id = document.querySelectorAll('#id')[0];
+	let pin = document.querySelectorAll('#pin')[0];
+	
+	if (pin.value.length > 0){
+		pin.value = pin.value.substr(0,pin.value.length - 1);
+		return;
+	}
+	if (id.value.length > 0){
+		id.value = id.value.substr(0,id.value.length - 1);
+		return;
+	}
+}
+
 function loginEmployee() {
     let id = document.querySelectorAll('#id')[0];
     let pin = document.querySelectorAll('#pin')[0];
@@ -43,7 +57,6 @@ function loginEmployee() {
     }
 
     let employee = JSON.parse(request.responseText);
-
     sessionStorage.setItem('currentEmployeeID', employee.id);
     sessionStorage.setItem('currentEmployeePin', employee.pin);
     sessionStorage.setItem('currentEmployeeName', employee.name);
@@ -51,4 +64,8 @@ function loginEmployee() {
     sessionStorage.setItem('currentEmployeeShift', employee.shift);
     
     window.location.replace("employeeDashboard.html");
+}
+
+function goToLoginAdmin() {
+	window.location.replace("loginAdmin.html");
 }

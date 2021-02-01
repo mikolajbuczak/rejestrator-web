@@ -12,21 +12,37 @@ html {
 	color:#F2ECEB;
 	padding-top: 1vh;
 	font-size: 2vw;
+	font-weight: bold;
 	
 }
 
 .input {
 	padding-top: 1vh;
-	font-size: 2vw;
+	
 }
 
 #id {
 	size: 4;
+	width: 100%;
+	font-size: 4vmin;
+}
+
+#pin {
+	size: 4;
+	width: 100%;
+	font-size: 4vmin;
+}
+
+h2 {
+	font-size: 2.5vmax;
+	width:100%;
+	margin:auto;
+	color: Red;
+	text-align: center;
 }
 
 .error {
     display: none;
-	font-size: 2vw;
 }
 
 .b_Panel {
@@ -34,33 +50,89 @@ html {
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content:center;
 }
 
 .PlaceHolder {
 	visibility: hidden;
 	margin: 2% 6%;
 	background-color: #555555;
-	border: 1px #A68F63  solid;
+	border: 0.5vmin #A68F63  solid;
 	border-radius:3vmax;
-	width: 21%;
+	width: 18%;
+	display: flex;
+}
+.PlaceHolderS{
+	visibility: hidden;
+	margin: 2% 3%;
+	background-color: #555555;
+	border: 0.5vmin #A68F63  solid;
+	border-radius:3vmax;
+	width: 8%;
 	display: flex;
 }
 
 .button {
 	margin: 2% 6%;
 	background-color: #555555;
-	border: 0.5vw #A68F63  solid;
+	border: 0.5vmin #A68F63  solid;
 	border-radius:3vmax;
-	width: 19%;
+	width: 18%;
 	display: flex;
+	font-weight:bold;
+}
+
+._AdminLogin {
+	width: 48%;
+	margin-top:7.5vh
+}
+
+.button:hover {
+	background-color: #676767;
+}
+
+.contentL {
+	text-align: center;
+	font-size: 3.5vmin;
+	width: auto;
+	margin: auto;
+	color:#F2ECEB;
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
 }
 
 .content {
 	text-align: center;
-	font-size: 4vw;
+	font-size: 4vmin;
 	width: auto;
 	margin: auto;
 	color:#F2ECEB;
-	padding-top: 2vh;
-	padding-bottom: 2vh;
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
+}
+
+@media only screen and (max-width: 1000px) {
+	html {
+		width: 85%;
+	}
+	.b_Panel {
+		width: 85%;
+	}
+	.inputForm {
+	width:40%;
+	
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		width: 95%;
+	}
+	.b_Panel {
+		width: 95%;
+	}
+	.inputForm {
+	width:50%;
+	
+	}
 }

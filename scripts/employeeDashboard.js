@@ -1,6 +1,6 @@
 // Autor: Mikołaj Buczak & Kamil Kaloch
 
-let DEBUG = true;
+let DEBUG = false;
 
 let employeeID;
 let name;

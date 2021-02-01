@@ -31,3 +31,7 @@ function loginAdmin() {
 
     window.location.replace("adminDashboard.html");
 }
+
+function goToLoginEmployee() {
+	window.location.replace("loginEmployee.html");
+}

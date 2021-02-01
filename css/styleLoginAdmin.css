@@ -6,12 +6,12 @@ html, body {
 
 html {
     display: table;
+	width: 95%;
     margin: auto;
 }
 
 body {
     display: table-cell;
-    vertical-align: middle;
     background: #403A3A;
 }
 
@@ -19,46 +19,78 @@ h1 {
     text-align: center;
     color: #F2ECEB;
     font-weight: bold;
+	font-size: 5.5vw;
 }
 
 form {
-    position: relative;
     width: 40vw;
-    height: 20vh;
     align-items: center;
-    margin: 0 auto;
+    margin: 3vh auto;
 }
 
 input {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 80%;
     padding: 1vh 1vw;
     margin: 15px auto;
     border: 0;
+	font-size: 3.5vw;
 }
 
-input[type=text], input[type=password] {
-    width: 12vw;
-    min-width: 240px;
+.button {
+	margin: 0% auto;
+	background-color: #555555;
+	border: 0.5vmin #A68F63  solid;
+	border-radius:3vmax;
+	width: 30vw;
+	display: flex;
+	font-weight:bold;
 }
 
-input[type=submit] {
-    width: 5vw;
-    min-width: 100px;
+.content {
+	text-align: center;
+	font-size: 4vw;
+	width: auto;
+	margin: auto;
+	color:#F2ECEB;
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
+}
+._EmployeeLogin{
+	
+	margin:7.5vh auto;
+	width: 50vw;
+}
+
+h2 {
     text-align: center;
-
-}
-
-.inputs {
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    color: RED;
+    font-weight: bold;
+	font-size: 4.0vw;
 }
 
 .error {
     display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+	h1 {
+		font-size: 3.5vw;
+	}
+	h2 {
+		font-size: 1.5vw;
+	}
+	input {
+		font-size: 1.5vw;
+	}
+	.content {
+		font-size: 1.5vw;
+	}
+	.button{
+		width: 15vw;
+	}
+	._EmployeeLogin{
+		width: 25vw;
+	}
 }

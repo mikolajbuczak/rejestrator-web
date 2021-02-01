@@ -16,15 +16,13 @@
     <body>
 		<form class = "inputForm" onsubmit="return false">
 		<div class="input">
-			<label for="id">ID:</label>
-			<input type="text" id="id" tabindex="0"  required maxlength="4"/>
+			<input type="text" id="id" tabindex="0" readonly required maxlength="4" placeholder="ID"/>
 		</div>
 		<div class="input">
-			<label for="pin">Pin:</label>
-			<input type="password" id="pin" tabindex="1"  required maxlength="4" pattern="[0-9]*" inputmode="numeric" />
+			<input type="password" id="pin" tabindex="1" readonly required maxlength="4" placeholder="PIN" pattern="[0-9]*" inputmode="numeric" />
 		</div>
-		<h2 class="error">Nie można zalogować</h2>
 		</form>
+		<h2 class="error">Nie można zalogować</h2>
 		<div class="b_Panel">
 			<div class="button _Number" onclick="addDigit(this)"><div class="content">7</div></div>
 			<div class="button _Number" onclick="addDigit(this)"><div class="content">8</div></div>
@@ -40,6 +38,8 @@
 			
 			<div class="PlaceHolder"><div class="content">0</div></div>
 			<div class="button _Number" onclick="addDigit(this)"><div class="content">0</div></div>
+			<div class="button _Number" onclick="eraseDigit(this)"><div class="contentL">Del</div></div>
+			<div class="button _AdminLogin" onclick="goToLoginAdmin()"><div class="contentL">Logowanie Administratora</div></div>
 		</div>
     </body>
 </html>
