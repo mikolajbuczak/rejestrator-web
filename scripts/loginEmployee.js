@@ -48,8 +48,11 @@ function loginEmployee() {
     request.send();
 
     if (request.status != 200) {
-        let error = document.querySelectorAll(".error")[0];
-        error.classList.remove('error');
+        let error = document.querySelectorAll("#error")[0];
+
+        if (error.classList.contains('error')) {
+            error.classList.remove('error');
+        }
 
         id.value = "";
         pin.value = "";
