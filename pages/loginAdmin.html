@@ -19,7 +19,7 @@
         <form onsubmit="return false">
             <div class="inputs">
                 <input type="text" placeholder="Login" id="username" required/>
-                <input type="password" placeholder="Hasło" id="password" required/>
+                <input type="password" placeholder="Hasło" id="password" required onkeyup="detectReturn(event)"/>
             </div>
         </form>
 		<h2 id="error" class="error">Nie można zalogować</h2>

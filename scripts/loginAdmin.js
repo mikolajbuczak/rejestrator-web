@@ -38,3 +38,9 @@ function loginAdmin() {
 function goToLoginEmployee() {
 	window.location.replace("loginEmployee.html");
 }
+
+function detectReturn(event) {
+    if (event.key === "Enter") {
+        loginAdmin();
+    }
+}
