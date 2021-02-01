@@ -57,7 +57,7 @@ function loginEmployee() {
     }
 
     let employee = JSON.parse(request.responseText);
-    sessionStorage.setItem('currentEmployeeID', employee.id);
+    sessionStorage.setItem('currentEmployeeID', employee.employeeID);
     sessionStorage.setItem('currentEmployeePin', employee.pin);
     sessionStorage.setItem('currentEmployeeName', employee.name);
     sessionStorage.setItem('currentEmployeeSurname', employee.surname);
