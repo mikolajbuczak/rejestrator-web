@@ -32,7 +32,7 @@ function loginAdmin() {
     sessionStorage.setItem('currentAdminName', admin.name);
     sessionStorage.setItem('currentAdminSurname', admin.surname);
 
-    window.location.replace("adminDashboard.html");
+    window.location.replace("adminDashboardLogs.html");
 }
 
 function goToLoginEmployee() {

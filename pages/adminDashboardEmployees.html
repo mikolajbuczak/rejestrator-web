@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>PRACOWNICY</title>
+
+        <meta name="author" content="Mikołaj Buczak & Kamil Kaloch">
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/styleAdminDashboardEmployees.css">
+        <script src="../scripts/adminDashboardEmployees.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body onload="create()">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">DASHBOARD</label>
+            <ul>
+                <li><a href="adminDashboardLogs.html">LOGOWANIA</a></li>
+                <li><a class="active" href="adminDashboardEmployees.html">PRACOWNICY</a></li>
+                <li><a href="adminDashboardAdd.html">DODAJ</a></li>
+                <li><a href="adminDashboardReport.html">RAPORT</a></li>
+                <li><a href="#">WYLOGUJ</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1 id="name">Dashboard administratora</h1>
+        </section>
+    </body>
+</html>
