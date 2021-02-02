@@ -20,7 +20,7 @@
     color: #F2ECEB;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 0 0 100px;
     font-weight: bold;
   }
 
@@ -63,14 +63,25 @@
     display: none;
   }
 
-  @media (max-width: 952px) {
+  @media (max-width: 1062px) {
     label.logo {
-      font-size: 30px;
-      padding-left: 50px;
+      font-size: 31px;
+      padding-left: 65px;
     }
 
     nav ul li a {
       font-size: 16px;
+    }
+  }
+
+  @media (max-width: 952px) {
+    label.logo {
+      font-size: 29px;
+      padding-left: 45px;
+    }
+
+    nav ul li a {
+      font-size: 15px;
     }
   }
 
