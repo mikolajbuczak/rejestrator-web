@@ -14,44 +14,28 @@
     </head>
 
     <body onload="create()">
-        <h1 id="name">Dashboard pracownika</h1>
-        <button id="logout" onclick="logout()">Wyloguj</button>
-
+		<div class="bar">
+			<div id="logout" onclick="logout()">Wyloguj</div>
+			<h1 id="name">Dashboard pracownika</h1>
+		</div>
+        
         <div class="columns">
             <div id="availableDiv" class="oneTable">
-                <div class="div1">
-                    <table class="table1">
-                        <tr>
-                            <th>ZADANIA PRZYDZIELONE</th>
-                        </tr>
-                    </table>
-                </div>
+                <div class="div1">ZADANIA PRZYDZIELONE</div>
                 <div class="div2">
                     <table class="table2" id="available"></table>
                 </div>
             </div>
     
             <div id="inProgressDiv" class="oneTable">
-                <div class="div1">
-                    <table class="table1">
-                        <tr>
-                            <th>ZADANIA W TRAKCIE</th>
-                        </tr>
-                    </table>
-                </div>
+                <div class="div1">ZADANIA W TRAKCIE</div>
                 <div class="div2">
                     <table class="table2" id="inProgress"></table>
                 </div>
             </div>
     
             <div id="doneDiv" class="oneTable">
-                <div class="div1">
-                    <table class="table1">
-                        <tr>
-                            <th>ZADANIA ZAKOŃCZONE</th>
-                        </tr>
-                    </table>
-                </div>
+                <div class="div1">ZADANIA ZAKOŃCZONE</div>
                 <div class="div2">
                     <table class="table2" id="done"></table>
                 </div>
