@@ -27,7 +27,7 @@ function loginAdmin() {
 
     let admin = JSON.parse(request.responseText);
 
-    sessionStorage.setItem('currentAdminID', admin.id);
+    sessionStorage.setItem('currentAdminID', admin.administratorID);
     sessionStorage.setItem('currentAdminPin', admin.password);
     sessionStorage.setItem('currentAdminName', admin.name);
     sessionStorage.setItem('currentAdminSurname', admin.surname);
