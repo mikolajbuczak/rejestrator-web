@@ -66,9 +66,43 @@ function loginEmployee() {
     sessionStorage.setItem('currentEmployeeSurname', employee.surname);
     sessionStorage.setItem('currentEmployeeShift', employee.shift);
     
+    writeLog(employee.employeeID);
     window.location.replace("employeeDashboard.html");
 }
 
 function goToLoginAdmin() {
 	window.location.replace("loginAdmin.html");
+}
+
+function writeLog(id) {
+    let request = new XMLHttpRequest();
+    request.open("POST", `..\\..\\rejestrator\\api\\logs`, false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    let params = `employeeID=${id}&date=${getDate()}`;
+    request.send(params);
+
+    if (request.status != 200) {
+        console.error("Can't POST task!");
+        return;
+    }
+}
+
+function getDate() {
+    let now = new Date();
+
+    let day = now.getDate().toString();
+    if (day.length < 2) day = `0${day}`;
+
+    let month = (now.getMonth() + 1).toString();
+    if (month.length < 2) month = `0${month}`;
+
+    let year = now.getFullYear().toString();
+
+    let hour = now.getHours().toString();
+    if (hour.length < 2) hour = `0${hour}`;
+
+    let minute = now.getMinutes().toString();
+    if (minute.length < 2) minute = `0${minute}`;
+
+    return `${day}.${month}.${year} ${hour}:${minute}`;
 }
