@@ -1,0 +1,49 @@
+.div1 {
+    position: relative;
+    height: 40px;
+    width: 1200px;
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.table1 {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    width: 1200px;
+    color: white;
+}
+
+.div2 {
+    height: 700px;
+    width: 1200px;
+    overflow: auto;
+    overflow-x: hidden;
+    border: 1px solid black;
+}
+
+.table2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    width: 1200px;
+    color: black;
+}
+
+td {
+    padding-top: 10px;
+}
+
+.oneTable {
+    margin: 20px 0;
+}
+
+.oneTable > *{
+    margin: auto;
+}

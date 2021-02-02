@@ -17,7 +17,7 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
 
-    <body onload="create()">
+    <body onload="create(); displayLogs()">
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -35,6 +35,18 @@
 
         <section>
             <h1 id="name">Dashboard administratora</h1>
+            <div id="logsDiv" class="oneTable">
+                <div class="div1">
+                    <table class="table1">
+                        <tr>
+                            <th>LOGOWANIA PRACOWNIKÓW</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div2">
+                    <table class="table2" id="logs"></table>
+                </div>
+            </div>
         </section>
     </body>
 </html>
