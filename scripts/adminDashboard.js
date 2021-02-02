@@ -6,7 +6,7 @@ function create() {
     let name = sessionStorage.getItem('currentAdminName');
     let surname = sessionStorage.getItem('currentAdminSurname');
 
-    nameField.innerHTML = `${name} ${surname}`;
+    nameField.innerHTML = `Witaj ${name} ${surname}!`;
 }
 
 function logout() {
