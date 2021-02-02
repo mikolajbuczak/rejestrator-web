@@ -8,3 +8,12 @@ function create() {
 
     nameField.innerHTML = `${name} ${surname}`;
 }
+
+function logout() {
+    sessionStorage.removeItem('currentAdminID');
+    sessionStorage.removeItem('currentAdminPin');
+    sessionStorage.removeItem('currentAdminName');
+    sessionStorage.removeItem('currentAdminSurname');
+    
+    window.location.replace("loginAdmin.html");
+}
