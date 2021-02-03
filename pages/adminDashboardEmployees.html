@@ -17,7 +17,7 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
 
-    <body onload="create()">
+    <body onload="create(); loadSearchBox()">
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -34,7 +34,20 @@
         </nav>
 
         <section>
+            <h2>Pracownik</h2>
 
+            <div class="select-box">
+                <div class="options-container">
+                </div>
+
+                <div class="selected">
+                    Wybierz pracownika
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Wyszukaj..." />
+                </div>
+            </div>
         </section>
     </body>
 </html>
