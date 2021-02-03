@@ -48,6 +48,71 @@
                     <input type="text" placeholder="Wyszukaj..." />
                 </div>
             </div>
+
+            <div class="slider">
+                <div class="slides">
+                  <input type="radio" name="radio-btn" id="radio1">
+                  <input type="radio" name="radio-btn" id="radio2">
+                  <input type="radio" name="radio-btn" id="radio3">
+                  <input type="radio" name="radio-btn" id="radio4">
+
+                  <div class="slide first">
+                    <div class="div1">
+                        <table class="table1">
+                            <tr>
+                                <th>LOGOWANIA</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div2">
+                        <table class="table2" id="logs"></table>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="div1">
+                        <table class="table1">
+                            <tr>
+                                <th>ZADANIA PRZYDZIELONE</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div2">
+                        <table class="table2" id="available"></table>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="div1">
+                        <table class="table1">
+                            <tr>
+                                <th>ZADANIA W TRAKCIE</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div2">
+                        <table class="table2" id="inProgress"></table>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="div1">
+                        <table class="table1">
+                            <tr>
+                                <th>ZADANIA ZAKOŃCZONE</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div2">
+                        <table class="table2" id="done"></table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="navigation-manual">
+                  <label for="radio1" class="manual-btn" style="background-color: #403A3A;" onclick="color(this)"></label>
+                  <label for="radio2" class="manual-btn" onclick="color(this)"></label>
+                  <label for="radio3" class="manual-btn" onclick="color(this)"></label>
+                  <label for="radio4" class="manual-btn" onclick="color(this)"></label>
+                </div>
+              </div>
         </section>
     </body>
 </html>
