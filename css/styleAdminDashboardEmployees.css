@@ -1,19 +1,19 @@
 /* autor Mikołaj Buczak & Kamil Kaloch */
-h2 {
-    margin: 16px;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
 
 section {
-    padding: 32px;
+	display:flex;
+	width:90vw;
+	margin:0px;
+	flex-direction: row;
 }
 
 .select-box {
+	z-index:1;
     position: relative;
     display: flex;
-    width: 400px;
+    width: 25vw;
     flex-direction: column;
+	margin-right:10vw;
 }
 
 .select-box > * {
@@ -33,6 +33,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     order: 1;
+	z-index:1;
 }
 
 .selected {
@@ -58,7 +59,7 @@ section {
 }
 
 .select-box .options-container.active {
-    max-height: 240px;
+    max-height: calc(88vh - 164px);
     opacity: 1;
     overflow-y: scroll;
     margin-top: 54px;
@@ -121,63 +122,62 @@ section {
 }
 
 .div1 {
-    position: relative;
-    height: 40px;
-    padding: 0;
+    height: 50px;
+    line-height: 50px;
     margin: 0;
-    background-color: gray;
+    background-color: #A68F63;
     border: 1px solid black;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+	color: Black;
+	text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.table1 {
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16pt;
-    color: white;
-    width: 100%;
-    margin: auto;
-}
-
 .div2 {
-    height: 660px;
+    height: calc(96vh - 50px - 80px);
     overflow: auto;
     overflow-x: hidden;
     border: 1px solid black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+	border-top:none;
 }
 
 .table2 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10pt;
-    color: black;
+    font-size: 12pt;
+    color: #F2ECEB;
+	width:100%
+	
+}
+tr:hover{
+	background-color: #5A5151;
 }
 
 td {
     padding-top: 10px;
-    padding-left: 10px;
+	padding-bottom:10px;
+	border-bottom: 2px dashed #A68F63;
+	border-right: none;
+	border-left: none;
+	border-top: none;
     text-align: left;
 }
 
 .slider{
-    width: 800px;
-    height: 700px;
+    width: 55vw;
+    height: calc(96vh - 80px);
     border-radius: 10px;
     overflow: hidden;
-    position: absolute;
-    top: 125px;
-    right: 400px;
+	background-color:#403A3A;
   }
   
 .slides{
     width: 500%;
-    height: 700px;
+    height: calc(96vh - 80px);
     display: flex;
 }
 
@@ -191,23 +191,24 @@ td {
 }
 
 .slide > *{
-    width: 800px;
+    width: 55vw;
 }
 
 .navigation-manual{
     position: absolute;
-    width: 800px;
+    width: 55vw;
     margin-top: -40px;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn{
-    border: 2px solid #403A3A;
+    border: 2px solid #A68F63;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+	background-color:white;
 }
 
 .manual-btn:not(:last-child){
@@ -228,4 +229,39 @@ td {
 
 #radio4:checked ~ .first{
     margin-left: -60%;
+}
+
+@media (max-width: 550px) {
+    section{
+		flex-direction: column;
+	}
+	.select-box {
+		z-index:1;
+		width: 90vw;
+		margin-right:0vw;
+	}
+	.slider{
+		position: absolute;
+		top: calc(2vh + 80px + 60px);
+		z-index:0;
+		width: 90vw;
+		height: calc(96vh - 80px - 60px);
+	}
+	.slides{
+		height: calc(96vh - 80px - 60px);
+	}
+	.slide > *{
+		width: 90vw;
+	}
+	.navigation-manual{
+		width: 90vw;
+	}
+	.div2 {
+    height: calc(96vh - 50px - 80px - 60px);
+	}
+}
+@media (max-width: 330px) {
+	.div1{
+		font-size:7vw;
+	}
 }
