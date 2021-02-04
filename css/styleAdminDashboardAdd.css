@@ -1,15 +1,21 @@
 /* autor Mikołaj Buczak & Kamil Kaloch */
 
 section {
-    padding: 32px;
+	width:90vw;
+}
+
+.wrapper{
+	display:flex;
+	flex-direction:row;
 }
 
 .select-box {
+	z-index:2;
     position: relative;
     display: flex;
-    width: 400px;
+    width: 25vw;
     flex-direction: column;
-    margin: 0 auto;
+	margin-right:5vw;
 }
 
 .select-box > * {
@@ -38,6 +44,7 @@ section {
     color: #F2ECEB;
     position: relative;
     order: 0;
+	z-index:2;
 }
 
 .selected::after {
@@ -54,7 +61,7 @@ section {
 }
 
 .select-box .options-container.active {
-    max-height: 240px;
+    max-height: calc(88vh - 164px);
     opacity: 1;
     overflow-y: scroll;
     margin-top: 54px;
@@ -141,13 +148,18 @@ section {
 
 .taskInput {
     text-align: center;
+	
 }
 
 textarea {
     padding: 10px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    margin-top: 25px;
+    margin-top: 10px;
+	width:56vw;
+	max-width:700px;
+	max-height: 150px;
+	font-size:14pt;
 }
 
 h2 {
@@ -156,4 +168,30 @@ h2 {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
+}
+
+@media (max-height: 400px) {
+	textarea{
+		height:calc(60vh - 80px);
+	}
+}
+
+@media (max-width: 550px) {
+	.wrapper{
+		flex-direction:column;
+	}
+	.select-box {
+		z-index:2;
+		width: 90vw;
+		margin-right:0vw;
+	}
+	textarea{
+		width: 261px;
+		height:calc(60vh - 80px - 40px);
+	}
+	.taskHolder{
+		position:absolute;
+		top: calc(2vh + 80px + 60px);
+		left:calc(50vw - 131px);
+	}
 }

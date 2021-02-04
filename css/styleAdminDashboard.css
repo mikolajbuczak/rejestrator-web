@@ -26,9 +26,10 @@
   }
 
   nav ul {
-	z-index: 1;
+	z-index: 1000;
     float: right;
     padding-right: 20px;
+	
   }
 
   nav ul li {
