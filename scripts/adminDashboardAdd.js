@@ -98,7 +98,6 @@ function addTask() {
 
     if(!task) {
         displayError("Wpisz treść zadania!");
-        resetControls();
         return;
     }
 
@@ -180,6 +179,7 @@ function resetSearchBox() {
     }
 
     selected.innerHTML = "Wybierz pracownika";
+    employeeID = null;
 }
 
 function resetTextarea() {
