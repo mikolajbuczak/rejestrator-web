@@ -8,10 +8,11 @@
 
   body {
     font-family: montserrat;
+	background-color: #8C7D77;
   }
 
   nav {
-    background: #403A3A;
+    background-color: #403A3A;
     height: 80px;
     width: 100%;
   }
@@ -20,13 +21,14 @@
     color: #F2ECEB;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 0 0 100px;
+    padding: 0 0 0 45px;
     font-weight: bold;
   }
 
   nav ul {
+	z-index: 1;
     float: right;
-    margin-right: 20px;
+    padding-right: 20px;
   }
 
   nav ul li {
@@ -36,7 +38,7 @@
   }
 
   nav ul li a {
-    color: #F2ECEB;
+    color: #BFB3AE;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -45,7 +47,7 @@
   }
 
   a.active,a:hover {
-    background: #555555;
+    background-color: #555555;
     transition: .5s;
   }
 
@@ -54,7 +56,7 @@
     color: #F2ECEB;
     float: right;
     line-height: 80px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
     display: none;
   }
@@ -63,21 +65,10 @@
     display: none;
   }
 
-  @media (max-width: 1062px) {
+  @media (max-width: 1024px) {
     label.logo {
-      font-size: 31px;
-      padding-left: 65px;
-    }
-
-    nav ul li a {
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 952px) {
-    label.logo {
-      font-size: 29px;
-      padding-left: 45px;
+      font-size: 24px;
+      padding-left: 15px;
     }
 
     nav ul li a {
@@ -123,5 +114,12 @@
 
   section {
     background-size: cover;
-    height: calc(100vh - 80px);
+    height: calc(98vh - 80px);
+	margin:2vh 5vw 0vh 5vw;
+  }
+  
+    @media (max-width: 256px) {
+    label.logo {
+      font-size: 6vw;
+    }
   }
