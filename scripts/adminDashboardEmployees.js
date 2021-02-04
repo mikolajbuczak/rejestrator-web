@@ -137,15 +137,16 @@ function displayTasksAvailable() {
         let cell1 = row.insertCell(0);
         cell1.innerHTML = task.task;
         
-        // let cell2 = row.insertCell(1);
+        let cell2 = row.insertCell(1);
 
-        // let button = document.createElement('button');
-        // button.innerHTML = "START";
-        // button.onclick = function() {
-        //     startTask(task);
-        // };
+        let button = document.createElement('div');
+        button.classList.add('delete');
+        button.onclick = function() {
+            deleteTaskAvailable(task.id);
+            displayTasksAvailable();
+        };
 
-        // cell2.appendChild(button);
+        cell2.appendChild(button);
     });
 }
 
@@ -164,6 +165,17 @@ function displayTasksInProgress() {
 
         let cell2 = row.insertCell(1);
         cell2.innerHTML = task.date;
+
+        let cell3 = row.insertCell(2);
+
+        let button = document.createElement('div');
+        button.classList.add('delete');
+        button.onclick = function() {
+            deleteTaskInProgress(task.id);
+            displayTasksInProgress();
+        };
+
+        cell3.appendChild(button);
     });
 }
 
@@ -255,4 +267,26 @@ function color(label) {
     });
 
     label.style.backgroundColor = '#403A3A';
+}
+
+function deleteTaskAvailable(id) {
+    let request = new XMLHttpRequest();
+    request.open("DELETE", `..\\..\\rejestrator\\api\\startTask\\${id}`, false);
+    request.send();
+
+    if (request.status != 200) {
+        console.error("Can't DELETE task!");
+        return;
+    }
+}
+
+function deleteTaskInProgress(id) {
+    let request = new XMLHttpRequest();
+    request.open("DELETE", `..\\..\\rejestrator\\api\\endTask\\${id}`, false);
+    request.send();
+
+    if (request.status != 200) {
+        console.error("Can't DELETE task!");
+        return;
+    }
 }

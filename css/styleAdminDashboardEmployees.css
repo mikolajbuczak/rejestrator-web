@@ -268,3 +268,13 @@ td {
 		font-size:7vw;
 	}
 }
+
+.delete {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background: url("../images/delete.svg");
+    margin: auto;
+    border-width: 0;
+    cursor: pointer;
+}
