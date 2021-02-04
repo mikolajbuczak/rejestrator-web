@@ -1,17 +1,20 @@
 /* autor Mikołaj Buczak & Kamil Kaloch */
 html {
-	background: #403A3A;
+	background:#8C7D77;
+}
+body {
+	margin: 0px;
 }
 .div1 {
     height: auto;
-    width: 30vw;
-    padding: 0.5vh 0.5vw;
+    width: 31vw;
+    padding: 1vh 0vw;
     margin: 0;
-    background-color: gray;
+    background-color: #A68F63;
     border: 1px solid black;
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 2.3vw;
-	color: #F2ECEB;
+	color: Black;
 	text-align: center;
 }
 
@@ -21,6 +24,7 @@ html {
     overflow: auto;
     overflow-x: hidden;
     border: 1px solid black;
+	border-top:none;
 }
 
 .table2 {
@@ -29,10 +33,20 @@ html {
     font-size: 10pt;
     width: 31vw;
     color: #F2ECEB;
+	border-collapse:collapse;
+}
+
+tr:hover{
+	background-color: #5A5151;
 }
 
 td {
     padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px dashed #A68F63;
+	border-right: none;
+	border-left: none;
+	border-top: none;
 }
 
 td:nth-child(1) {
@@ -55,9 +69,15 @@ button {
 
 .oneTable {
     float: left;
-    width: 33.33%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 31vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	background-color:#403A3A;
+	margin-right:0.5vw;
+	margin-left:0.5vw;
+}
+.columns{
+	padding:0vh 1.5vw;
 }
 
 .columns::after {
@@ -71,17 +91,19 @@ button {
 .bar {
 	display: inline-block;
 	width:100%;
-	
+	background-color:#403A3A;
 }
 
 h1 {
 	display: inline-block;
 	width:auto;
 	color: #F2ECEB;
+	padding-left:1vw;
 }
 
 #logout {
 	margin-top:15px;
+	margin-right:1vw;
 	float:right;
 	padding: 12px 20px;
 	font-size: 1.3em ;
@@ -122,15 +144,14 @@ h1 {
 	}
 	
 	.oneTable {
-		float: center;
 		width: 100%;
 	}
 		
 	.div2, .table2{
-		width: 95vw;
+		width: 100%;
 	}
 	.div1{
-		width: 94vw;
+		width: 100%;
 		font-size: 1em;
 	}
 	#logout {
