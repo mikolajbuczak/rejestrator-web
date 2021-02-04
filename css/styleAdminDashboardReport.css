@@ -1,0 +1,44 @@
+.wrapper {
+    width: 100%;
+    margin: 100px 0;
+}
+
+.chart {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    margin-top:15px;
+	padding: 12px 20px;
+	font-size: 1.3em ;
+	color: #F2ECEB;
+	text-align: center;
+	background-color: #555555;
+	border: 3px #A68F63  solid;
+	border-radius:30px;
+	font-weight:bold;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#previous {
+    left: 15%;
+}
+
+#next {
+    right: 15%;
+}
+
+.button:hover {
+    background: #403A3A;;
+}
