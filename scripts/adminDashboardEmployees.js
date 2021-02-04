@@ -162,15 +162,8 @@ function displayTasksInProgress() {
         let cell1 = row.insertCell(0);
         cell1.innerHTML = task.task;
 
-        //let cell2 = row.insertCell(1);
-
-        // let button = document.createElement('button');
-        // button.innerHTML = "KONIEC";
-        // button.onclick = function() {
-        //     endTask(task);
-        // };
-
-        // cell2.appendChild(button);
+        let cell2 = row.insertCell(1);
+        cell2.innerHTML = task.date;
     });
 }
 
@@ -182,9 +175,18 @@ function displayTasksDone() {
 
     tasksDone.forEach(task => {
         let row = table.insertRow(0);
-        let cell = row.insertCell(0);
 
-        cell.innerHTML = task.task;
+        let cell1 = row.insertCell(0);
+        cell1.innerHTML = task.task;
+
+        let cell2 = row.insertCell(1);
+        cell2.innerHTML = task.startdate;
+
+        let cell3 = row.insertCell(2);
+        cell3.innerHTML = task.enddate;
+
+        let cell4 = row.insertCell(3);
+        cell4.innerHTML = task.time;
     });
 }
 
