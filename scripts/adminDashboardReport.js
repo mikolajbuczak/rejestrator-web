@@ -14,7 +14,7 @@ function loadChart() {
 
     getData();
     getCurrentSlideData();
-
+	Chart.defaults.global.defaultFontColor = '#F2ECEB';
     ctx = document.getElementById('myChart').getContext('2d');
     myChart = new Chart(ctx, {
         type: 'bar',
@@ -24,33 +24,42 @@ function loadChart() {
                 {
                     label: 'Logowania',
                     data: currentSlideData[1],
-                    backgroundColor: 'yellow',
+                    backgroundColor: '#852faa'
                 },
                 {
                     label: 'Zadania przydzielone',
                     data: currentSlideData[2],
-                    backgroundColor: 'red',
+                    backgroundColor: '#1a78aa'
                 },
                 {
                     label: 'Zadania w trakcie',
                     data: currentSlideData[3],
-                    backgroundColor: 'green',
+                    backgroundColor: '#598a10'
                 },
                 {
                     label: 'Zadania zakończone',
                     data: currentSlideData[4],
-                    backgroundColor: 'blue',
+                    backgroundColor: '#c19f3c'
                 }
             ]
         },
         options: {
+			legend: {
+                labels: {
+                    fontColor: "#F2ECEB",
+                    fontSize: 18
+                }
+            },
             scales: {
+				
                 yAxes: [{
                     ticks: {
                         beginAtZero: true
                     }
                 }]
-            }
+				
+            },
+			maintainAspectRatio: false
         }
     });
 }

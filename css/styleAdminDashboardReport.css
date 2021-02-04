@@ -1,20 +1,21 @@
 .wrapper {
     width: 100%;
-    margin: 100px 0;
+    margin: 5px 0;
 }
 
 .chart {
     position: relative;
-    width: 50vw;
-    height: 50vh;
+    width: 100%;
     margin: auto;
+	background-color: #403A3A;
+}
+.buttonHolder{
+	display:flex;
+	flex-direction:row;
 }
 
 .button {
-    position: absolute;
-    top: 50%;
     width: 100px;
-    margin-top:15px;
 	padding: 12px 20px;
 	font-size: 1.3em ;
 	color: #F2ECEB;
@@ -36,9 +37,10 @@
 }
 
 #previous {
-    left: 15%;
+    margin-right: calc(90vw - 200px);
 }
-
-#next {
-    right: 15%;
+@media (min-width: 1024px) {
+	.chart {
+    width: 60%;
+	}
 }

@@ -35,13 +35,15 @@
         </nav>
 
         <section>
-            <div id="previous" class="button" onclick="previous()">&larr;</div>
+			<div class="buttonHolder">
+				<div id="previous" class="button" onclick="previous()">&larr;</div>
+				<div id="next" class="button" onclick="next()">&rarr;</div>
+			</div>
             <div class="wrapper">
                 <div class="chart">
                     <canvas id="myChart" width="600" height="400"></canvas>
                 </div>
             </div>
-            <div id="next" class="button" onclick="next()">&rarr;</div>
         </section>
     </body>
 </html>
