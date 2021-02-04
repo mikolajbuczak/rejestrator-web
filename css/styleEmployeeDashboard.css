@@ -65,6 +65,7 @@ button {
 	border: 2px #A68F63  solid;
 	border-radius:9px;
 	font-weight:bold;
+	cursor: pointer;
 }
 
 .oneTable {
@@ -113,7 +114,7 @@ h1 {
 	border: 3px #A68F63  solid;
 	border-radius:30px;
 	font-weight:bold;
-	cursor: default;
+	cursor: pointer;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
