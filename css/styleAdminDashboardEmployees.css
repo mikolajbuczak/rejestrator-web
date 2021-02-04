@@ -278,3 +278,11 @@ td {
     border-width: 0;
     cursor: pointer;
 }
+
+#available td:nth-child(2) {
+    width: 50px;
+}
+
+#inProgress td:nth-child(3) {
+    width: 50px
+}
