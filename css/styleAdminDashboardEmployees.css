@@ -279,10 +279,41 @@ td {
     cursor: pointer;
 }
 
+#logs td:nth-child(1) {
+    width: 80px;
+}
+
+#available td:nth-child(1) {
+    text-align: left;
+    padding-left: 15px;
+}
+
 #available td:nth-child(2) {
     width: 50px;
 }
 
+#inProgress td:nth-child(1) {
+    text-align: left;
+    padding-left: 15px;
+}
+
+#inProgress td:nth-child(2) {
+    width: 200px
+}
+
 #inProgress td:nth-child(3) {
     width: 50px
+}
+
+#done td:nth-child(1) {
+    text-align: left;
+    padding-left: 15px;
+}
+
+#done td:nth-child(2) {
+    width: 200px;
+}
+
+#done td:nth-child(3) {
+    width: 200px;
 }
