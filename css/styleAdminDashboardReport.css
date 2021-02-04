@@ -31,14 +31,14 @@
 	user-select: none;
 }
 
+.button:hover {
+    background-color: #676767;
+}
+
 #previous {
     left: 15%;
 }
 
 #next {
     right: 15%;
-}
-
-.button:hover {
-    background: #403A3A;;
 }

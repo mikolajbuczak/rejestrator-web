@@ -135,6 +135,10 @@ section {
 	user-select: none;
 }
 
+.button:hover {
+    background-color: #676767;
+}
+
 .taskInput {
     text-align: center;
 }
