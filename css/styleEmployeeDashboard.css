@@ -66,6 +66,7 @@ button {
 	border-radius:9px;
 	font-weight:bold;
 	cursor: pointer;
+	outline: 0pt;
 }
 
 button:hover, #logout:hover {
